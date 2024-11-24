@@ -12,6 +12,11 @@ function updateClock() {
     const month = now.getMonth() + 1;
     const day = now.getDate();
     document.querySelector('.date').textContent = `${year}年${month}月${day}日`;
+
+    // 更新周几
+    const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+    const weekday = weekdays[now.getDay()];
+    document.querySelector('.weekday').textContent = `星期${weekday}`;
 }
 
 // 初始化时钟
